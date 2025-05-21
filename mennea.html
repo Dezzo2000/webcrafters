@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEB CRAFTERS</title>
+  <link rel="icon" href="img/icon.png" type="image/png">
+
+  <!--CSS di Splide -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+
+  <!-- Script per il carosello -->
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=scIGKNmw2VnwKvpdsTynZPYW8TklS33unXBaHjo6EmL4ghClrjb9mqVXxCVgggMo8MrjJLtCuftKP3JXK1JLQheI6CiHpZW1cXdSJnpfR8yzipW-rNdWa-7cIuadlvkpqIcMXMLLVCopwQpR6LFfQEJPdT03V3TXl6ILY4squvA4LI-LLo5zcgJ1IzhEpXAes56S6MEFZ3bmRhM0KNQtXpnuAJlKy3mnlLJmVS-qpU3Zpc7vmIwNG7aUZGhY2Z31PGjYGEWhUpthYETlIC57_7mpicIt1alw8_tLfQdqs0BzqPhdAXlUyCbntTP0DxLucqDA6FzDwQ3XEILIkfyGP9BsN9iy4IuP3-d-RZQuXe7zRh1p8sym9uATCpW2jMgm2OJ8Jf2UJHDx7oSJVKqh0pg90T-NRHoyXXlDLYR1KF-OpZNByAxb7Gw01oqy9NUsfuZ25JzjtLPvnqMmdW6Gh_0NUKcQCFIO31rUS9QEH9kGE5FNN5s3C5479tUF7Hcci36p9wyPN3QhB8F6b7TkSn33aJkzwTJ4MWrbl3nsLcktdJGWy6cwJGmCdovXFZdGXQqUf__IYATTg8uCWbn2Ng6EgRyMXOOcW7KzGGDULDMQsRLoSYdRyk_nm-12_VDotYpVyU2uKqkSAnKJ_n07XLCPv4CY_lT-bs7vdYolW8Ex9i7T4PSydjj5hkD9vtZ3TZ3IABHiPTQ9AbQGIPgrJuWVMfI1T6geeCKfEPVpPJTFQeK1WCMsZPuNB6uHAjJxL4Uj-KyrWxHClOZ1IApVq6pmTINBdWkNQAPGenBv4JJetTpUcUYdNo-6yoX860lWULOl5xLe8BmCswfKo6qcjVV5p8zxKIxO7R67o673YE7E-DGFtuKPGTig_N-gbPo1WWSoBgk1zUY_8G5lMybEEiDkmTUYEgqn-wZy81I-Cz80ahrDxtd6Mb3EGksMWNOtFxQnqhmht49EM_a4o0Igk73el6cdKoNiPrgnhgEAbIpwQRv7XAlJMmbKKi5WzQJcdc39Gan7pTkOcs2mQpN-jAxqNhwp4TzSpACta2tKWtASS_UjG7QyJdE23omIZ5oGbUsjKICpIzV8MlUiz_BHGNO5zZBTLEPj-T3-z-wtdlaT5ZCkBBk2Gg4Hrg0bDUaiTFG8F--TCcQewMOvriERIL2Cr6u-YMZXzFHFVLbhZIdt92l0JEeK-hxhGAJUF6wZJcfHPG-cWNUiHY10-v17hgIP4oiOnuQ8t4O2mHjQtaYpl9uV4sfP1l1HPeWHMqaCQglec2tk7pFUByhRE9JFN011p4TsbaVjqZrJ5adJDbt3E1MkYFOrOS15uAi1aiIZMu5XxQ6j9ZCo6hOk3axjslIE68hntKZMhoNC8MMBUdZ0AeC01u4AtBtKJxuG-nqulZGDsrBFf_A0e3I-CjaxkM2r3hfgHBoQ0Ersw0PNrYMgsIC9ioafgDu4bXgNCnriMvsUY1k8t-CqXo--xrXDPB9tFDw2mRUYFHGhDKRp1E5kxfZyn0ARubSPdJ8QS_o5l1XPjtkaO34UwExLVJMj9TeLPTriTQI86qemOSIkXI0m6H0BnylX80Iu7OniiHnk2a4sWp5qK620JWOw4Qek1hj_-F8FngCPKTUBjp7_uHYd30EcLgz_c1Tpcm09Wuplzyx9MVzmwgR8fk2QAc8AeA" nonce="6bf0285a7e9a0da30369074289a09bce" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8wLz91aT0yJmlrPTUzMDcyNTMxNTUmYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctYTpyODM5NzUxNDg0MDU5NTk5OTMzNCZ0aD0xOTYyOTY2YTk1NzcxY2VhJnZpZXc9YXR0JmRpc3A9c2FmZSZyZWFsYXR0aWQ9Zl9tOWUxOWt0ZjAmencmc2FkZGJhdD1BTkdqZEotZk8wQUtiVDBQVEU3bEdOTlFPNVgtb1paa3FZS2pQSndzbk53bXl5TXdmbEotQVMydEhaZFcwWUE5aXNqWVVpa2NGemlNZkxVR1R6SjF3ZElxOGJnVnliRkxhM240R3VaY1FLTTA2VkQtbmoxM0F0aWVMbDkzTkJoUDdxUVpwU2JfcHNkUVFhVW9uZS1STmFWdnZhVDhLalFfWFlWZXd1cjk4ejJvU0dMZGVnUWRmNFpwajROVFRCbGRYSHFhV3R4aEZDWTJzcHVUVmNaUXRkbm5QNldnSTliWS1LZmFzRi1jQVpuYUxVUnVVNmxZVGoybjRFdFBJT05RM25NV0RUMUg0eTNQeGhMQktmbTlaUWFBTHdiUGdBeW1UWHkwRmZXOXpMMjMtQmhReXh3MWhVV0JEOWhkMjlwTnprRWJjUEZReDRfb19VUkRXdklLZ2psV0ZOVFBrcVdmYTlxeFVPUWRHcU10SlI4WjVIaXZESXQtTVFpV3czMlNHdHFQN2RhVFVORjZvT0hqUGwwSmNuUU1nRXdYM0tDaEZKSUthdkV0czZER2ExTXA5RWhtcnZXVnNkazB6Z19NMG9RelM3aWtqUjY5RHJEX3hJcWFBMWNQTXhGcFQ1eVpwVlYyVWE3QnJncG9EbllzZzFYLTAyUDVFZjZhUHFvbnpvZnViT196M3FkS1NGb2g4bHprREUtS0hQLXBJTVVYbFgwM201cHpHU3FseUIzdkdEd0ZQaW80WU5nTkdxbm1kUXdtU3QwdmxDUWJtS0NVRGJpNlJCT1hSUGRRMnJDWVdDcUo2V1poMm9pemN4Qm5OWE1hUDVfLWQzR0t2Nk54bkNVemM1Yy1nc2llRGJkOGNfNTR4cDc0V3hacFBWWXNFV1F6UzdzNHNXcHdOUHRqekZOWWJsbUNyRXdIbHI5dkNlczRBWVFVMkZBS05feFhIOFJnWnl3NmZqeTdhdDlVMnBDUkJkcHc4eVJYZWV4QmVDcUFneDFjUlNiaTJ6LWVwSUh1Wnd4R3lpMGw3aEVUT3RUQkg3MjZWTjJ1aTl3dGdvdGxpSjBrajFYZVBUaFhscXRHeDI5Wi00cXdrN0N1WE83V2JPLWZGdUV5QUl5elVha2dJTTh3WjRrRjBoR241MUFQUTJFUDhBX2pxWkRqaXQtMVo5U18tbnp4RUhOWGJVRVNjUXNxVk9WS21lbm9leDRhOVpIMWVlcGR4VnpmcVR1NllkS0paUzA3eW1SUmJTaUJhQ2FTN3VvU25TSF9LdjBhU0xpdVV2M2NGTXR0TllsWk5lanBVejNUWVhXckNmOURDZTdrRG1TbXBWaUFFc3dyOXFMa1FWVVdiNWZQYXZZWUc0UHZCNDdFT0FyOWRPbWY"/>
+  
+  <!--Css bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+  <!--Stili-->
+  <link rel="stylesheet" href="css/mennea.css">
+  <link rel="stylesheet" href="css/stile.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <!-- Logo -->
+        <div class="img-fluid"><a href="index.html"><img src="img/logo.png" class="logo"></a></div>
+        
+        <!-- Hamburger menu per mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars text-white"></i>
+      </button>
+        
+        <!-- Navbar content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <!-- Dropdown Personaggi -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="personaggiDropdown" role="button" data-bs-toggle="dropdown">
+                        Personaggi
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="marconi.html">Guglielmo Marconi</a></li>
+                        <li><a class="dropdown-item" href="cartesio.html">Cartesio</a></li>
+                        <li><a class="dropdown-item" href="tim.html">Tim Berners Lee</a></li>
+                        <li><a class="dropdown-item" href="mennea.html">Pietro Mennea</a></li>
+                        <li><a class="dropdown-item" href="polo.html">Marco Polo</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="fonti.html">Fonti</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Chi siamo</a>
+                </li>
+                
+                <!-- Ricerca -->
+                <li class="nav-item">
+                    <form class="d-flex search-form ms-lg-3">
+                        <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </li>
+                
+                <!-- Pulsante traduzione funzionante -->
+                <li class="nav-item ms-lg-3">
+                    <button class="btn translate-btn" onclick="toggleLanguage()">
+                        <i class="fas fa-language"></i> EN
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  <!-- Carosello Splide -->
+  <div class="splide" id="carouselExample">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div class="img-wrapper">
+            <img src="img/mennecar.jpg" alt="Pietro Mennea">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br>
+  
+	<div class="container">
+    <table class="alternanza">
+      <tr>
+        <td class="testo">
+          <p>Nato il 28 giugno 1952 a Barletta, Italia, Pietro Mennea è stato uno dei più grandi sprinter della storia dell'atletica. Con il suo celebre soprannome "La Freccia del Sud", ha portato il nome dell'Italia sul tetto del mondo, vincendo medaglie olimpiche e battendo record mondiali.</p>
+        </td>
+        <td class="immagine">
+          <img src="img/pietromennea1.jpg" alt="Immagine 1">
+        </td>
+      </tr>
+      <tr>
+        <td class="immagine">
+          <img src="img/pietromennea2.jpg" alt="Immagine 2">
+        </td>
+        <td class="testo">
+          <p>Mennea si appassiona all'atletica leggera durante la sua adolescenza, ma il suo impegno serio nell'allenamento inizia intorno ai 17 anni, quando entra nel mondo delle competizioni e scopre di avere un talento naturale nella velocità. La sua crescita come atleta è avvenuta grazie a una combinazione di determinazione, capacità di apprendere e allenamento costante.</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="testo">
+          <p>Nel 1969 si trasferisce a Roma, dove inizia a lavorare con il suo storico allenatore Giampaolo Rosi. Qui comincia a intensificare gli allenamenti, imparando a perfezionare la sua tecnica di corsa e migliorare la sua preparazione fisica. Durante la sua carriera, la sua disciplina e la sua capacità di lavorare duramente sul piano atletico sono diventate uno dei suoi tratti distintivi.</p>
+        </td>
+        <td class="immagine">
+          <img src="img/pietromennea3.jpg" alt="Immagine 3">
+        </td>
+      </tr>
+      <tr>
+        <td class="immagine">
+          <img src="img/pietromennea4.jpg" alt="Immagine 4">
+        </td>
+        <td class="testo">
+          <p>Mennea si allenava due volte al giorno, e spesso la sua routine comprendeva mattina e pomeriggio, con sessioni specifiche per la velocità, la forza e la resistenza. La mattina era dedicata a sessioni di sprint e tecnica, mentre il pomeriggio si concentrava su lavori di potenza, resistenza aerobica e esercizi di recupero.
+ La preparazione psicologica era altrettanto importante, e Mennea lavorava molto sulla sua concentrazione mentale.</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="testo">
+          <p>Il suo primo grande trionfo olimpico arriva nel 1980, quando, ai Giochi Olimpici di Mosca, conquista la medaglia d'oro nei 200 metri con un tempo straordinario di 19"72. Quella vittoria non solo gli regala l'oro olimpico, ma segna anche un momento storico per l'atletica italiana, con Mennea che diventa il simbolo della determinazione, de l coraggio e della forza di volontà. Ma la sua carriera non si ferma qui.</p>
+        </td>
+        <td class="immagine">
+          <img src="img/pietromennea5.jpg" alt="Immagine 5">
+        </td>
+      </tr>
+      <tr>
+        <td class="immagine">
+          <img src="img/pietromennea6.jpg" alt="Immagine 6">
+        </td>
+        <td class="testo">
+          <p>Oltre ai suoi successi olimpici e mondiali, Mennea si distingue per una carriera che va oltre le medaglie. La sua preparazione tecnica e fisica era fuori dal comune: il lavoro sui dettagli, la forza mentale e la sua capacità di affrontare le sfide con determinazione lo hanno reso un esempio per le generazioni future. Mennea rappresenta la bellezza della sportività: non solo la velocità, ma anche la disciplina, la costanza e la capacità di superare se stessi.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <iframe width="100%" height="400" src="https://time.graphics/it/embed?v=1&id=4523917904ced2a4423b3936f364f7d8" frameborder="0" allowfullscreen ></iframe>
+
+   <footer class="footer">
+    <div>
+      <img src="img/logo.png" class="logo" alt="Webcrafters Logo">
+    </div>
+  
+    <div class="footer-section">
+      <h4>SVILUPPATO DA:</h4>
+      <p>Bruni Tommaso</p>
+      <p>Rigoni Samuele</p>
+      <p>Xia Waye</p>
+      <p>Hazari Dihak</p>
+      <p>De Zotti Andrea</p>
+    </div>
+  
+    <div class="footer-section">
+      <h4>SEDE:</h4>
+      <p>ITI Francesco Severi Padova</p>
+  
+      <h4>CONTATTI:</h4>
+      <p><a href="mailto:info@webcrafters.it">info@webcrafters.it</a></p>
+  
+      <h4>SOCIAL:</h4>
+     <div class="social-icons">
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/i/flow/login"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.tiktok.com/@tommasoobruni"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Aggiungi i file JS di Splide -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+
+  <!--Script di bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+  <script>
+    // Inizializzazione di Splide per il carosello
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#carouselExample', {
+        type       : 'fade',    
+        heightRatio: 0.5,       
+        pagination: false,       
+        arrows     : false,  
+      }).mount();
+    });
+  </script>
+
+  <script>
+    function toggleLanguage() {
+        const currentLang = document.documentElement.lang;
+        if (currentLang === 'it') {
+            document.documentElement.lang = 'en';
+            alert('Lingua cambiata in inglese');
+        } else {
+            document.documentElement.lang = 'it';
+            alert('Lingua cambiata in italiano');
+        }
+    }
+  </script>
+
+</body>
+</html>

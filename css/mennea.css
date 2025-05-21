@@ -1,0 +1,111 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+table.alternanza {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.alternanza td {
+  vertical-align: middle;
+  padding: 20px;
+  width: 50%;
+}
+
+.testo p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.immagine img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+.container2{
+	max-width: 80%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+h2 {
+	margin-top: 30px;
+}
+ul {
+	margin-top: 5px;
+}
+li {
+	text-decoration:none;
+	color: black;
+}
+
+section {
+	background: #ffffff;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 12px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+	margin-top: 0;
+	color: black;
+}
+
+section ul {
+	padding-left: 1.2rem;
+	margin: 0;
+}
+
+section li {
+	margin: 6px 0;
+}
+
+section a {
+	text-decoration: none;
+    color: #0066cc;
+}
+
+section a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+	body {
+		padding: 0px;
+	}
+
+	section h1 {
+		font-size: 1.5em;
+	}
+
+	section h2 {
+		font-size: 1.2em;
+	}
+}
+
+/* Media query per dispositivi con larghezza massima di 768px */
+@media screen and (max-width: 768px) {
+  table.alternanza,
+  table.alternanza tr,
+  table.alternanza td {
+    display: block;
+    width: 100%;
+  }
+
+  table.alternanza td {
+    padding: 10px 0;
+  }
+
+  /* Rimpicciolisce le immagini su smartphone/tablet */
+  .immagine img {
+    max-width: 220px;
+    border-radius: 20px;
+  }
+}
