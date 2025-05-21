@@ -5,173 +5,69 @@ body {
     background-color: #E4C37B;
   }
 
-.container2 {
-	width: 80%;
-	padding: 20px;
-	text-align: center;
-	color: black;
-	font-family:'Agdasima', Arial, sans-serif;
-		font-size: 1.5em;
-        }
-
-.container2 h1 {
-	margin-left: -20px;
-	font-size: 2em;
-}
-
-.container2 p {
-	font-size: 1.1em;
-	color: #333;
-}
-
-.container3 {
-    display: flex;
-    justify-content: center; /* Centra le immagini orizzontalmente */
-    align-items: center;     /* Centra le immagini verticalmente */
-    flex-wrap: wrap;         /* Permette alle immagini di andare su più righe se necessario */
-    gap: 50px;               /* Distanza tra le immagini */
-    padding: 60px;
-}
-
-.container3 img {
-    width: 170px;            /* Imposta la larghezza delle immagini */
-    height: 170px;           /* Imposta l'altezza delle immagini */
-    object-fit: cover;       /* Mantiene il rapporto di aspetto, ma ritaglia l'immagine se necessario */
-    border-radius: 8px;      /* Aggiungi un bordo arrotondato (opzionale) */
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 4rem;
-    margin-left: 20rem;
-    margin-bottom: 2rem;
-    color: #333;
-  }
-
-/* Stile per il carosello splide*/
 .splide {
     width: 100%;
     max-width: 100%;
     height: 80vh;
     margin: auto;
-    position: relative; 
-    margin-top: -9px;
+    position: relative; /* Per posizionare i pallini relativi all'immagine */
   }
 
-
-.splide__slide img {
+  /* Imposta l'immagine per occupare 100% della larghezza e 75% dell'altezza */
+  .splide__slide img {
     width: 100%;
-    height: 80vh; 
-    object-fit: cover; 
-    border-bottom-left-radius: 20px; 
+    height: 80vh; /* 75% dell'altezza della finestra */
+    object-fit: cover; /* Assicurati che l'immagine copra l'area senza deformarsi */
+    border-bottom-left-radius: 20px; /* Nuovo: arrotonda i bordi inferiori */
     border-bottom-right-radius: 20px;
     margin-top: 10px;
   }
 
-
+ /* Posiziona i pallini in basso a destra all'interno dell'immagine */
 .splide__pagination {
     position: absolute;
-    bottom: 10%;
-    right: 10%;
+    bottom: 10%;  /* Usiamo percentuale invece di pixel fissi */
+    right: 10%;   /* Usiamo percentuale invece di pixel fissi */
     z-index: 10;
     display: flex;
     justify-content: flex-end;
-    transform: translate(0, 0); 
+    transform: translate(0, 0); /* Assicura che non ci siano trasformazioni indesiderate */
 }
 
+/* Modifica il colore e dimensione dei pallini */
 .splide__pagination__page {
     background-color: rgba(217, 217, 217, 0.85);
     border-radius: 50%;
-    width: 1.2vw; 
-    height: 1.2vw; 
-    min-width: 12px; 
-    min-height: 12px; 
+    width: 1.2vw; /* Dimensione relativa alla viewport width */
+    height: 1.2vw; /* Dimensione relativa alla viewport width */
+    min-width: 12px; /* Dimensione minima */
+    min-height: 12px; /* Dimensione minima */
     margin: 0 0.3vw;
     transition: all 0.3s ease;
 }
 
+/* Quando il pallino è attivo (selezionato) */
 .splide__pagination__page.is-active {
     background-color: #E4C37B;
     opacity: 1;
 }
 
-@media (max-width: 1000px) {
-		.container2 {
-		font-size: 100%;
-	}
-
-	.container3 img {
-		width: 90px;            /* Imposta la larghezza delle immagini */
-		height: 90px;           /* Imposta l'altezza delle immagini */
-	}
-    .splide__pagination {
-        bottom: 8%;
-        right: 8%;
-    }
-    .splide__pagination__page {
-        width: 1.5vw; 
-        height: 1.5vw; 
-        min-width: 15px; 
-        min-height: 15px; 
-        margin: 0 0.3vw;
-    }
-
-    .splide {
-        height: 50vh;
-      }
-
-    .splide__slide img {
-        height: 50vh; 
-    }
-
-    h1{
-      font-size: 2rem;
-      font-weight: bold;
-      margin: 1rem;
-      color: #333;
-    }
-
-    
-}  
+/* Per schermi molto piccoli */
 @media (max-width: 600px) {
-	  h1{
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin: 0.5rem;
-      color: #333;
-    }
-
-    p {
-		font-size: 1em;
-	}
-	
     .splide__pagination {
         bottom: 8%;
         right: 8%;
     }
     .splide__pagination__page {
-        width: 0px;
-        height: 0px;
+        width: 10px;
+        height: 10px;
         margin: 0 3px;
     }
     .splide {
         height: 25vh;
       }
-
-    .splide__slide img {
-        height: 25vh; 
-    }
-}
-
-@media (max-width: 320px){
-	
-    .splide {
-        height: 20vh;
-      }
-
-    .splide__slide img {
-        height: 20vh; 
+    .logo{
+      width: 75px;
     }
 }
 
@@ -187,8 +83,8 @@ h1 {
     z-index: 1;
   }
 
-/* Navbar*/
-.navbar {
+  /* Navbar trasparente */
+  .navbar {
     background-color: transparent !important;
     position: absolute;
     top: 0;
@@ -198,6 +94,7 @@ h1 {
     padding: 20px 0;
 }
 
+/* Stile per i link della navbar */
 .navbar-nav .nav-link {
     color: white !important;
     text-transform: uppercase;
@@ -207,6 +104,7 @@ h1 {
     padding: 5px 0;
 }
 
+/* Animazione sottolineatura */
 .navbar-nav .nav-link::after {
     content: '';
     position: absolute;
@@ -222,6 +120,7 @@ h1 {
     width: 100%;
 }
 
+/* Stile per il dropdown */
 .dropdown-menu {
     background-color: rgba(0,0,0,0.8);
     border: none;
@@ -239,6 +138,7 @@ h1 {
   width:150px;
 }
 
+/* Stile per la ricerca */
 .search-form .form-control {
     background-color: rgba(255,255,255,0.2);
     border: 1px solid rgba(255,255,255,0.3);
@@ -254,6 +154,7 @@ h1 {
     border-color: white;
 }
 
+/* Stile per il pulsante di traduzione */
 .translate-btn {
     color: white;
     border: 1px solid white;
@@ -265,14 +166,14 @@ h1 {
     background-color: rgba(255,255,255,0.1);
 }
 
+/* Menu hamburger su mobile */
 .navbar-toggler {
   color: white;
   border-color: white;
   z-index: 1001;
 }
 
-
-
+/* Sidebar mobile */
 @media (max-width: 1000px) {
   .navbar-collapse {
       position: fixed;
@@ -310,6 +211,7 @@ h1 {
       margin-top: 20px;
   }
   
+  /* Overlay quando il menu è aperto */
   .sidebar-overlay {
       position: fixed;
       top: 0;
@@ -333,15 +235,7 @@ h1 {
   }
 }
 
-@media (max-width: 600px) {
-    .logo{
-        width: 50px;
-      }
-    
-}
-
-/* Stile per il footer */
-@import url('https://fonts.googleapis.com/css2?family=Agdasima&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Agdasima&display=swap');
 .footer {
 	font-size: 150%;
 	font-family: 'Agdasima', sans-serif;
@@ -406,108 +300,117 @@ h1 {
   }
 }
 
-/* Stile per le card */
-.carousel-wrapper {
-    position: relative;
-    padding: 2rem 0;
-  }
 
-  .carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 1.5rem;
-    padding: 1rem 2rem;
-  }
+/*-----------------------------------------------------------------------------------------------------------------------------------
+/* ------------------------ CONTAINER GENERALE ---------------------------- */
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; /* spazio tra le carte */
+  padding: 4rem 1rem;
+}
 
-  .carousel::-webkit-scrollbar {
-    display: none;
-  }
+/* ------------------------ CARD BASE ---------------------------- */
+.card {
+  border-radius: 25px;
+  width: 100%;
+  max-width: 1200px;
+  background: #16161d;
+  border: 2px solid #555555;
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.card:hover {
+  transform: scale(1.01) rotateX(1deg) rotateY(1deg);
+}
+
+/* ------------------------ IMMAGINE PROFILO ---------------------------- */
+.card img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------ TESTO E CONTATTI ---------------------------- */
+.card_title {
+  color: #fff;
+  font: 700 1.5rem monospace;
+  text-shadow: -1px -1px 0 #000,  
+               1px -1px 0 #000,
+              -1px 1px 0 #000,
+               1px 1px 0 #000;
+  margin-bottom: 0.5rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card p {
+  color: #ffffff;
+    text-shadow: -1px -1px 0 #000,  
+               1px -1px 0 #000,
+              -1px 1px 0 #000,
+               1px 1px 0 #000;
+  margin: 0.5rem 0;
+}
+
+.card .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.card .contact span {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.card .contact .icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.card .contact a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.card .contact a:hover {
+  color: white;
+}
+
+/* ------------------------ RESPONSIVE ---------------------------- */
+@media (min-width: 768px) {
   .card {
-    color: #fff;
-    border-radius: 30px;
-    overflow: hidden;
-    width: 400px;
-    height: 450px;
-    flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .card-hidden {
-    border-radius: 30px;
-    overflow: hidden;
-    width: 265px;
-    flex-shrink: 0;
+    flex-direction: row;
+    text-align: left;
   }
 
   .card img {
-    width: 100%;
-    object-fit: cover;
+    margin-right: 2rem;
+    margin-bottom: 0;
   }
 
   .card-content {
-    padding: 1rem;
+    align-items: flex-start;
   }
 
-  .artist {
-    font-weight: bold;
-    font-size: 1rem;
+  .card .contact {
+    align-items: flex-end;
   }
-
-  .description {
-    font-size: 0.95rem;
-    margin-top: 0.5rem;
-    color: #ddd;
-  }
-
-  .arrow-container {
-    position: absolute;
-    bottom: 0.5rem;
-    right: 2rem;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .arrow {
-    background: none;
-    border: none;
-    color: #000;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 0;
-    line-height: 1;
-  }
-  
-  .arrow:hover {
-    opacity: 0.6;
-  }
-
-  @media (max-width: 1000px) {
-    .card {
-        width: 200px;
-        height: 250px;
-      }
-  
-    .card-hidden {
-        width: 50px;
-      }
-  
-    .artist {
-        font-size: 0.9rem;
-      }
-  
-    .description {
-        font-size: 0.85rem;
-      }
-  
-    .arrow-container {
-        bottom: 0.5rem;
-        right: 1rem;
-      }
-  
-    .arrow {
-        font-size: 1.5rem;
-      }
-    
-  }
+}
