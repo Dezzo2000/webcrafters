@@ -124,10 +124,22 @@ h1 {
     .splide__slide img {
         height: 50vh; 
     }
+
+    h1{
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 1rem;
+      color: #333;
+    }
+
+    
 }  
 @media (max-width: 600px) {
-	h1 {
-		font-size: 1.5em;
+	  h1{
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0.5rem;
+      color: #333;
     }
 
     p {
@@ -139,8 +151,8 @@ h1 {
         right: 8%;
     }
     .splide__pagination__page {
-        width: 10px;
-        height: 10px;
+        width: 0px;
+        height: 0px;
         margin: 0 3px;
     }
     .splide {
@@ -149,6 +161,17 @@ h1 {
 
     .splide__slide img {
         height: 25vh; 
+    }
+}
+
+@media (max-width: 320px){
+	
+    .splide {
+        height: 20vh;
+      }
+
+    .splide__slide img {
+        height: 20vh; 
     }
 }
 

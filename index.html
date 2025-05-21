@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <meta http-equiv="Content-Language" content="it">
   <title>WEB CRAFTERS</title>
-  <link rel="icon" href="img/icon.png" type="image/png">
+  <!-- Favicon che cambia in base al tema -->
+  <link rel="icon" href="img/icon-light.png" type="image/png" id="favicon">
+  <script>
+    function updateFavicon() {
+      const favicon = document.getElementById('favicon');
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        favicon.href = 'img/icon-dark.png';
+      } else {
+        favicon.href = 'img/icon-light.png';
+      }
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+    document.addEventListener('DOMContentLoaded', updateFavicon);
+  </script>
 
   <!--CSS di Splide -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
@@ -62,15 +77,15 @@
                 
                 <!-- Ricerca -->
                 <li class="nav-item">
-                    <form class="d-flex search-form ms-lg-3">
-                        <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
+                    <form class="d-flex search-form ms-lg-3" id="searchForm">
+                        <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" id="searchInput">
                         <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
                     </form>
                 </li>
                 
                 <!-- Pulsante traduzione funzionante -->
                 <li class="nav-item ms-lg-3">
-                    <button class="btn translate-btn" onclick="toggleLanguage()">
+                    <button class="btn translate-btn" onclick="toggleTranslation()">
                         <i class="fas fa-language"></i> EN
                     </button>
                 </li>
@@ -235,5 +250,31 @@
     }
   </script>
 
+  <script>
+      // Funzionalità di ricerca
+    document.getElementById('searchForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        const pages = [
+            { name: 'marconi', title: 'Guglielmo Marconi' },
+            { name: 'cartesio', title: 'Cartesio' },
+            { name: 'tim', title: 'Tim Berners Lee' },
+            { name: 'mennea', title: 'Pietro Mennea' },
+            { name: 'polo', title: 'Marco Polo' },
+            { name: 'fonti', title: 'Fonti' }
+        ];
+
+        const found = pages.find(page => 
+            page.title.toLowerCase().includes(searchTerm) || 
+            page.name.toLowerCase().includes(searchTerm)
+        );
+
+        if (found) {
+            window.location.href = `${found.name}.html`;
+        } else {
+            alert('Nessun risultato trovato per: ' + searchTerm);
+        }
+    });
+  </script>
 </body>
 </html>
