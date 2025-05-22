@@ -78,12 +78,6 @@
                     </form>
                 </li>
                 
-                <!-- Pulsante traduzione funzionante -->
-                <li class="nav-item ms-lg-3">
-                    <button class="btn translate-btn" onclick="toggleLanguage()">
-                        <i class="fas fa-language"></i> EN
-                    </button>
-                </li>
             </ul>
         </div>
     </div>
@@ -221,19 +215,6 @@
         arrows     : false,  
       }).mount();
     });
-  </script>
-
-  <script>
-    function toggleLanguage() {
-        const currentLang = document.documentElement.lang;
-        if (currentLang === 'it') {
-            document.documentElement.lang = 'en';
-            alert('Lingua cambiata in inglese');
-        } else {
-            document.documentElement.lang = 'it';
-            alert('Lingua cambiata in italiano');
-        }
-    }
   </script>
 
   <script>

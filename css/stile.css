@@ -432,6 +432,11 @@ h1 {
     height: 450px;
     flex-shrink: 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+  }
+
+  .card img:hover {
+  transform: scale(1.2) rotateX(1deg) rotateY(1deg);
   }
 
   .card-hidden {
@@ -444,6 +449,7 @@ h1 {
   .card img {
     width: 100%;
     object-fit: cover;
+    transition: transform 3s ease;
   }
 
   .card-content {
